@@ -44,3 +44,77 @@ Elementor might be re-rendering the search form during the AJAX update, causing 
 
 Thu, Jul 11﻿ After conducting a bunch of incremental tests during development, I managed to take care of several aspects of the search bar filtering functionality: HTML buttons, hidden value input, radio button event triggering, and the changing of the hidden input value in the search form | also figured out getting the correct AJAX request and response after clicking the radio buttons | also got the correct updating of the HTML (search-results-container) element | what's next is the PHP filtering
 
+Tentative action steps
+Project setup and requirements
+
+Choose a CMP (content management platform)
+
+Confirm GTM (Google Tag Manager)
+
+Define requirements:
+
+Consent types (just for cookies)
+
+Banner design (small enough that it doesn’t bother people)
+
+Consent language (no preference)
+
+Geographic scope (no preference)
+
+Setup your tests (on testing environment - AVT experimental branch)
+
+Consent state
+
+Banner interaction
+
+Tag firing
+
+Tools to use: GTM preview mode, browser developer tools, GA DebugView
+
+CMP integration and GTM configuration
+
+Integrate CMP
+
+Create GTM tags (CMP tag and Google Tags)
+
+Create GTM triggers (consent initialization and consent update)
+
+Custom JS and consent logic
+
+Set default consent state
+
+Handle consent updates
+
+Create GTM variables to store consent states and any other data needed for your consent logic
+
+Testing and refinement
+
+Use GTM's preview mode to test your implementation
+
+Deployment and monitoring
+
+Monitor on GTM, Google Analytics, and CMP
+
+10/21/24
+
+Tested out installing the CookieBot CMP plugin on the AVT experimental branch
+
+10/22/24
+
+I set up a free trial account for CookieBot (https://admin.cookiebot.com/domain-groups/88629886-c442-428a-a23d-17cbd54f9bcb/domains/fd4cb0f3-140e-4948-8658-53645eeb5570)
+
+It took me a while to figure out why the banner wasn’t showing up on the page, but then I simply added the script directly to the top of ‘header.php’ and it worked!
+
+I need to set up using Google Tag Manager so that I don’t have to stick to this temporary solution | also so that it makes sure that tags fire only after the user has given consent (especially with more advanced consent settings)
+
+“Built-in Consent Checks: Some Google tags (like Google Analytics and Google Ads) have built-in consent checks. This means they automatically adjust their behavior based on the consent status provided by Cookiebot. You don't need to add extra triggers for these tags.”
+
+11/5/24 -
+
+We purchased the Premium Medium subscription and I connected the plugin with our CookieBot account
+
+For some reason, though, the banner isn’t showing up on the AVT website. I’ll need to deal with that later.
+
+11/6/24 -
+
+Somehow now the banner works but only on incognito mode
