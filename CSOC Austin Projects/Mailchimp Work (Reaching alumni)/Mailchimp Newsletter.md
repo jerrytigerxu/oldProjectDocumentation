@@ -1,17 +1,5 @@
 # Mailchimp Newsletter 
-- **Important info:**
-	- Best point of contact: Tino
-	- Mailchimp account
-		- Username: christianstudentsoncampusut 
-		- Password: 2530Congre\$$
-	- Email address for Mailchimp account: csoc.ut@gmail.com
-		- Password: salemjeru1
-	- Credentials to Directnic
-		- webadmincsoc  
-		- pft>2u+XL.V+NFWT99!
-- **Email Domain:**
-	- contact@christianstudentsoncampus.com
-		- TFTZc0ngre\$$
+
 
 
 ---
